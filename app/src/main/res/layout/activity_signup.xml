@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    tools:context=".signup">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:contentDescription="@string/logo"
+        android:layout_width="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/image"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/duolingo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="@string/duolingo"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/duolingo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Age"
+        android:layout_width="37dp"
+        android:layout_height="24dp"
+        android:fontFamily="@font/poppinslight"
+        android:text="Age"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@id/signup" />
+
+    <EditText
+        android:id="@+id/edtAge"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/drawable_text"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="2dp"
+        android:textCursorDrawable="@drawable/text_cursor"
+        app:layout_constraintTop_toBottomOf="@id/Age"
+        app:layout_constraintBottom_toTopOf="@id/Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Name (optional)"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinslight"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtAge"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/drawable_text"
+        android:ems="10"
+        android:padding="2dp"
+        android:textCursorDrawable="dây/text_cursor"
+        app:layout_constraintTop_toBottomOf="@id/Name"
+        app:layout_constraintBottom_toTopOf="@id/Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="47dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinslight"
+        android:text="@string/email"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@id/edtName" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/drawable_text"
+        android:drawableEnd="@drawable/baseline_email"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:padding="2dp"
+        android:hint="@string/example_email"
+        android:textColorHint="@color/text_hint"
+        android:textCursorDrawable="@drawable/text_cursor"
+        app:layout_constraintTop_toBottomOf="@id/Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/pass"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinslight"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail"
+        app:layout_constraintStart_toStartOf="@+id/edtPassword" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/drawable_text"
+        android:drawableEnd="@drawable/baseline_lock"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:hint="@string/pas"
+        android:textColorHint="@color/text_hint"
+        android:textCursorDrawable="@drawable/text_cursor"
+        app:layout_constraintTop_toBottomOf="@id/Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/ForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/password"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinslight"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edtPassword" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/drawable_button"
+        android:backgroundTint="@drawable/drawable_press"
+        android:text="Sign up"
+        android:textColor="@color/Background"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/ForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="VisualLintButtonSize" />
+
+    <ImageView
+        android:id="@+id/iconFacebook"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iconGoogle"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/google"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
