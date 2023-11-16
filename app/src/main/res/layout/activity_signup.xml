@@ -102,12 +102,11 @@
         android:background="@drawable/drawable_text"
         android:ems="10"
         android:padding="2dp"
-        android:textCursorDrawable="dây/text_cursor"
+        android:textCursorDrawable="@drawable/text_cursor"
         app:layout_constraintTop_toBottomOf="@id/Name"
         app:layout_constraintBottom_toTopOf="@id/Email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="VisualLintTextFieldSize" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/Email"
@@ -193,7 +192,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="14dp"
-        android:background="@drawable/drawable_button"
         android:backgroundTint="@drawable/drawable_press"
         android:text="Sign up"
         android:textColor="@color/Background"
